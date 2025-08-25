@@ -1,0 +1,39 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: #9d66cf;
+    background-image: url("../_imagens/Adobe\ Express\ -\ file\ \(2\).png"), url(../_imagens/Adobe\ Express\ -\ file\ \(2\).png);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: 20%, 20%;
+    background-position-y: 400px;
+    background-position-x: right, left;
+}
+
+th {
+    width: 25%;
+}
+
+td {
+    text-align: center;
+}
+
+table {
+    border: 3px solid #932cad;
+    background-color: #c191ee;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 3px solid #932cad;
+    background-color: #c191ee;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+}

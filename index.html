@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superacaiajin</title>
+    <link rel="stylesheet" href="_css/style.css">
+</head>
+
+<body>
+    <h1>Sistema de PEDIDOS SuperAçaijin2</h1>
+
+    <table><br>
+        <tr>
+            <th>Açai Tamanho P</th>
+            <th>Açai Tamanho M</th>
+            <th>Açai Tamanho G</th>
+        </tr>
+        <tr>
+            <td>R$10,00</td>
+            <td>R$15,00</td>
+            <td>R$20,00</td>
+        </tr>
+    </table><br>
+
+
+    <fieldset>
+        <h3>Escolha aqui o Tamanho do seu SuperAçaijin</h3>
+        <button name="enviar" value="Enviar" type="button" onclick="msg()" id="botao1">tamanho</button>
+    </fieldset><br>
+
+
+    <fieldset>
+        <h3>Escolha aqui a forma de Pagamento</h3>
+        <button name="pag" value="Enviar" type="button" onclick="msg()" id="botao2">Forma pagamento</button>
+    </fieldset>
+
+    <script>
+        let botaoEscolhatamanho = document.getElementById("botao1");
+        let formaPagamento = document.getElementById("botao2");
+        var precoAcai = 0;
+        var troco = 0;
+
+        function botaoEscolha1() {
+            valorTamanho = prompt("Qual o tamanho desejado?");
+            switch (valorTamanho) {
+                case "P":
+                    precoAcai = 10;
+                    break;
+                case "M":
+                    precoAcai = 15;
+                    break;
+                case "G":
+                    precoAcai = 20;
+                    break;
+                default:
+                    alert("Erro ou tamanho não valido");
+                    precoAcai = 0;
+                    break;
+            }
+
+            console.log(precoAcai);
+        }
+
+        function botaoPagamento() {
+            var escolha = prompt("Digite a forma de pagamento, D(dinheiro) C(cartão)");
+            switch (escolha) {
+                case "D":
+                    var valorPago = Number(prompt("Qual o valor pago?"))
+                    if (valorPago < precoAcai) {
+                        alert(`Por favor insira uma quantidade valida de dinheiro`);
+                    } else if (valorPago == precoAcai) {
+                        alert(`Açai pago sem troco`);
+                    } else if (valorPago >= precoAcai) {
+                        troco = valorPago - precoAcai;
+                        alert(`O troco a ser dado é de: ${troco}R$`);
+                    } else {
+                        alert(`Erro`);
+                    }
+
+                    break;
+
+                case "C":
+                    let taxaCartao = precoAcai * 0.05;
+                    let valorCartao = taxaCartao + precoAcai;
+                    alert(`O valor total é de ${valorCartao}R$, por favor venha buscar`);
+                    break;
+
+                default:
+                    alert("Opção invalida");
+                    break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
