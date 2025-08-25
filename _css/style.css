@@ -4,7 +4,7 @@
 
 body {
     background-color: #9d66cf;
-    background-image: url("../_imagens/Adobe\ Express\ -\ file\ \(2\).png"), url(../_imagens/Adobe\ Express\ -\ file\ \(2\).png);
+    background-image: url("../_imagens/Adobe\ Express\ -\ file\ \(2\).png"), url("../_imagens/Adobe\ Express\ -\ file\ \(2\).png");
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed, fixed;
     background-size: 20%, 20%;
